@@ -1,6 +1,6 @@
 # node-graphql-starter
 
-This graphql project is built with `fastify` and `apollo server`, it enables you to get started working on your projects logic immediately.
+This graphql project is built with `fastify`,  `primsa` and `apollo server`, it enables you to get started working on your projects logic immediately.
 
 ### No need of setup 😀 🚀
 

@@ -12,7 +12,10 @@
     "node",
     "typescript",
     "node graphql starter",
-    "node graphql starter with typescript"
+    "node graphql starter with typescript",
+    "prisma",
+    "primsa apollo server with typescript",
+    " apollo server"
   ],
   "scripts": {
     "build": "npx ttsc --p ./tsconfig.json",
