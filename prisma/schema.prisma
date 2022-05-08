@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Demo {
+model Welcome {
   id      Int    @id @default(autoincrement())
   message String
 }

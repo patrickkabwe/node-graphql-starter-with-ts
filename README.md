@@ -31,6 +31,16 @@ This graphql project is built with `fastify`,  `primsa` and `apollo server`, it 
     ```
     $ yarn or yarn install
     ```
+4. #### Run database migration 
+
+    ```
+    $ yarn migrate
+    ```
+5. #### Add seed data Optional
+
+    ```
+    $ yarn seed
+    ```
 
 Thank you 🙏<br/>
 Happy Coding 😀

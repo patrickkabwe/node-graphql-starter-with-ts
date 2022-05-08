@@ -1,19 +1,19 @@
 import { gql } from "apollo-server-core";
 
 export const typeDefs = gql`
-  enum Gender {
-    MALE
-    FEMALE
-  }
-
-  type Name {
+  type Welcome {
     id: ID
-    name: String
-    gender: String
+    message: String
+  }
+  input WelcomeInput {
+    message: String!
   }
 
   type Query {
-    names(gender: Gender): [Name!]!
-    name(gender: Gender): Name
+    welcome: Welcome
+  }
+
+  type Mutation {
+    welcome(input: WelcomeInput): Welcome
   }
 `;

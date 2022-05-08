@@ -1,4 +1,5 @@
 import { ApolloServer } from "apollo-server-fastify";
+import { db } from "libs/prisma";
 import {
   ApolloServerPluginDrainHttpServer,
   ApolloServerPluginLandingPageGraphQLPlayground,
@@ -24,6 +25,11 @@ async function startApolloServer() {
   const server = new ApolloServer({
     schema: schema,
     csrfPrevention: true,
+    context: (req: any) => {
+      return {
+        req: req.request.raw,
+      };
+    },
     plugins: [
       fastifyAppClosePlugin(app),
       ApolloServerPluginDrainHttpServer({ httpServer: app.server }),
@@ -42,6 +48,7 @@ const startApp = async () => {
     await startApolloServer();
   } catch (error) {
     console.log(error);
+    db.$disconnect();
     process.exit(1);
   }
 };
